@@ -7,8 +7,19 @@ namespace SpinningDiscs
         static void Main(string[] args)
         {
             // TODO: Declare and initialize a CD and a DVD object.
+            CD cd = new CD("Jingle Bells", 700, "Audio", "CD");
+            DVD dvd = new DVD("The Lion King [DVD]", 4700, "Audio/Video", "DVD");
 
-            // TODO: Call each CD and DVD method to verify that they work as expected.
+            //Load Disc Info
+            cd.DiscInfo();
+            dvd.DiscInfo();
+
+            cd.SpinDisc();
+            dvd.SpinDisc();
+
+            //Test for writeData method
+            cd.WriteData(200);
+            cd.WriteData(800);
         }
     }
 }
