@@ -11,6 +11,8 @@ namespace SpinningDiscs
         public string TypeOfData { get;  } 
         public string DiscType { get;  }
 
+        public Dictionary<String, String> Contents { get; set; }
+
         public int MinSpinSpeed { get; set; }
         public int MaxSpinSpeed { get; set; }
 
@@ -49,12 +51,13 @@ namespace SpinningDiscs
             Console.WriteLine("\n");
         }
 
-        //actual available capacity
-        //free capacity
-
-        // Disc Info return string(details - name...)
-
-        //to write -- check for free capacity method -- conditional 
-        // read --  
+        public void ReadData()
+        {
+            foreach (KeyValuePair<string, string> entry in Contents)
+            {
+                Console.WriteLine(entry.Key + "  " + entry.Value);
+            }
+            Console.WriteLine("\n");
+        }
     }
 }
